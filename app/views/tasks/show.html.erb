@@ -1,0 +1,15 @@
+<%= @task.title %>
+<h1><%= task.details %></h1>
+<div>
+<%= link_to "Edit this task", edit_path%>
+</div>
+
+<div>
+<%= link_to "Back to index", tasks_path%>
+</div>
+<%#= render "form", task: @task %>
+
+<%= link_to "Delete"
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this task?"}
+%>
